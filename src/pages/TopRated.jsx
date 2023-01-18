@@ -6,6 +6,9 @@ const TopRated = () => {
   return (
     <div className='mt-20 pt-20'>
     <Movies
+    fetchURL={requests.topRated}
+    />  
+    <Movies
     fetchURL={requests.recommended2}
     />
     <Movies
