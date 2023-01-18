@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Movies from './pages/Movies'
-import Series from './pages/Series'
+import Search from './pages/Search'
 import TopRated from './pages/TopRated'
 import MovieDetail from './pages/MovieDetail'
 import Navbar from './components/Navbar'
@@ -16,8 +16,8 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/top-rated' element={<TopRated/>}></Route>
         <Route path='/movies' element={<Movies/>}></Route>
-        <Route path='/series' element={<Series/>}></Route>
-        <Route path='/:movieTitle' element={<MovieDetail/>}></Route>
+        <Route path='/series' element={<Search/>}></Route>
+        <Route path='/movies/:movieTitle' element={<MovieDetail/>}></Route>
       </Routes>
       <Footer/>
     </Router>

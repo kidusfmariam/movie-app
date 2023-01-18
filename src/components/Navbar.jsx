@@ -2,6 +2,7 @@ import React from 'react'
 import {AiOutlineMenu, AiOutlineHome, AiOutlineStar, AiOutlineSearch} from 'react-icons/ai'
 import {BiMovie} from 'react-icons/bi'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
     const [nav, setNav] = useState(false)
   return (
@@ -13,11 +14,17 @@ const Navbar = () => {
         </div>
     </div>
 
-    <div className={`md:w-[25%] w-[45%] bg-black bg-opacity-80 fixed z-40 h-screen ${nav? 'right-0' : 'right-[-100%]'} flex flex-col justify-center px-10 gap-10 `}>
+    <div className={`md:w-[25%] w-[65%] bg-black bg-opacity-80 fixed z-40 h-screen ${nav? 'right-0' : 'right-[-100%]'} flex flex-col justify-center px-10 gap-10 `}>
+        <Link to='/' style={{textDecoration: 'none'}} onClick={() => setNav(!nav)}>
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
          <AiOutlineHome size={21}/> Home</h2>
+        </Link>
+
+        <Link to='/top-rated' style={{textDecoration: 'none'}} onClick={() => setNav(!nav)}>
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
           <AiOutlineStar size={21}/>Top Rated</h2>
+        </Link>
+
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
           <BiMovie size={21}/>Movies</h2>
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
