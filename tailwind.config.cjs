@@ -14,7 +14,11 @@ module.exports = {
       darkGrey: '#222',
       red: '#f14d4d'
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        '3xl': '0 0 4px 5px rgb(13, 171, 118, 0.2)'
+      }
+    },
   },
   plugins: [],
 }

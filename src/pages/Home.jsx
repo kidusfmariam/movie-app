@@ -7,10 +7,17 @@ import Latest from '../containers/Latest'
 const Home = () => {
    
   return (
-   <div>
+   <>
     <Featured/>
-    <Latest/>
-   </div>
+    <Latest
+    fetchURL={requests.topRated}
+    title="TOP RATED"
+    />
+    <Latest
+    fetchURL={requests.recommended}
+    title="RECOMMENDED"
+    />
+   </>
   )
 }
 

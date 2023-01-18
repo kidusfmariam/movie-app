@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 body{
-    background-color: rgb(15, 15, 15);
+    background-color: #000;
     color: #fff;
 }
 *{
     font-family: 'Montserrat', sans-serif;
     transition: .3s all ease-in-out;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 *::-webkit-scrollbar{
     display: none;
