@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import requests from '../../requests'
 import CardSm from '../components/CardSm'
-const Movies = ({fetchURL}) => {
+const DisplayMovies = ({fetchURL}) => {
     const[latest, setLatest] = useState([])
     useEffect(() => {
      axios.get(fetchURL).then(response =>{
@@ -30,4 +30,4 @@ const Movies = ({fetchURL}) => {
   )
 }
 
-export default Movies
+export default DisplayMovies

@@ -1,29 +1,29 @@
 import React from 'react'
 import Latest from '../containers/Latest'
-import Movies from '../containers/Movies'
+import DisplayMovies from '../containers/DisplayMovies'
 import requests from '../../requests'
 const TopRated = () => {
   return (
     <div className='mt-20 pt-20'>
-    <Movies
+    <DisplayMovies
     fetchURL={requests.topRated}
     />  
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended2}
     />
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended3}
     />
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended4}
     />
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended5}
     />
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended6}
     />
-    <Movies
+    <DisplayMovies
     fetchURL={requests.recommended7}
     />
     </div>

@@ -10,6 +10,12 @@ const requests = {
     recommended6: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&page=6`,
     recommended7: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&page=7`,
     latest: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`,
+    movies: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=1`,
+    movies1: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=2`,
+    movies2: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=3`,
+    movies3: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=4`,
+    movies4: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=5`,
+    movies5: `https://api.themoviedb.org/3/movie/now_playing?api_key=${key}&language=en-US&page=6`,
 }
 
 export default requests
