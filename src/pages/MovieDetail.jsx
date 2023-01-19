@@ -2,12 +2,13 @@ import { data } from 'autoprefixer';
 import React from 'react'
 import { Link, useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import {AiFillStar} from 'react-icons/ai'
+import {AiFillStar, AiOutlineClose} from 'react-icons/ai'
 import {BsFillPlayFill} from 'react-icons/bs'
+import YouTube from 'react-youtube';
 import axios from 'axios';
 const MovieDetail = () => {
   const { movieId } = useParams();
-  const [trailer, setTrailer] = useState(null)
+  const [trailer, setTrailer] = useState([])
   const [showModal, setShowModal] = useState(false)
   const[latest, setLatest] = useState([])
     useEffect(() => {
@@ -24,11 +25,6 @@ const MovieDetail = () => {
      console.log(latest)
   return (
     <>
-
-
-
-
-
 
 
       {/* Movie Details Page */}
@@ -55,9 +51,9 @@ const MovieDetail = () => {
               <p>{`Released: ${latest.release_date}`}</p>
               <p>{`${latest.runtime} min`}</p>
             </div>
-              <p className='text-sm font-extralight mb-3'>{latest.overview}</p>
+              <p className='text-sm font-extralight mb-5 mt-3 sm:mt-0'>{latest.overview}</p>
               <div className='flex gap-5 items-center'>
-                <button className='px-2 py-1 border border-green font-extralight hover:bg-green flex items-center gap-1'>
+                <button onClick={() => setShowModal(!showModal)} className='px-2 py-1 border border-green font-extralight hover:bg-green flex items-center gap-1'>
                   <BsFillPlayFill/> Watch Trailer
                 </button>
                 <Link to='/' style={{textDecoration: 'none'}}>
@@ -67,6 +63,23 @@ const MovieDetail = () => {
           </div>
         </div>
       </div>
+
+
+    {/* Movie Trailer Overlay */}
+      <div className={`fixed z-[999] w-screen h-screen flex items-center justify-center top-0 left-0 bg-black bg-opacity-80 ${showModal ? '':'translate-y-[-100%]'}`}>
+        <AiOutlineClose size={32} className='text-white absolute top-3 right-4 z-[9999] cursor-pointer'
+        onClick={() => setShowModal(!showModal)}
+        />
+        <YouTube
+        videoId={trailer.key}
+        className="w-[60vh] h-[50vh] md:w-[120vh] md:h-[70vh]"
+        opts={{
+          width: "100%",
+          height: "100%",
+        }}
+        />
+      </div>
+
       
     </>
   )
