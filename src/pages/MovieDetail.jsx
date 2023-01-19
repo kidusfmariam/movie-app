@@ -53,7 +53,7 @@ const MovieDetail = () => {
             </div>
               <p className='text-sm font-extralight mb-5 mt-3 sm:mt-0'>{latest.overview}</p>
               <div className='flex gap-5 items-center'>
-                <button onClick={() => setShowModal(!showModal)} className='px-2 py-1 border border-green font-extralight hover:bg-green flex items-center gap-1'>
+                <button onClick={() => setShowModal(!showModal)} className='px-3 py-1 border border-green font-extralight hover:bg-green flex items-center gap-2'>
                   <BsFillPlayFill/> Watch Trailer
                 </button>
                 <Link to='/' style={{textDecoration: 'none'}}>
