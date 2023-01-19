@@ -25,7 +25,7 @@ const Featured = () => {
     }
     
   return (
-    <div className='relative pt-20 w-[100vw] h-[75vh] px-5 pb-4'>
+    <div className='relative pt-20 w-[100vw] h-[75vh] px-5 pb-4 overflow-y-hidden'>
         <h1 className='text-3xl pb-3 font-bold text-green'>FEATURED</h1>
         <MdChevronLeft onClick={slideLeft} className='absolute left-0 z-30 top-[60%] text-black bg-white rounded-full cursor-pointer opacity-50 hover:opacity-100' size={40} />
         <MdChevronRight onClick={slideRight} className='absolute right-0 z-30 top-[60%] text-black bg-white rounded-full cursor-pointer opacity-50 hover:opacity-100' size={40} />

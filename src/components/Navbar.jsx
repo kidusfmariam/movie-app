@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <>
     <div className='w-full fixed flex justify-between z-50 px-5 py-3'>
-        <h2 className='text-xl font-light  text-white cursor-pointer'>Movie Land</h2>
+        <div>
+        <img src="/Movie Land.png" alt="movie-land-logo" className='w-[150px] h-[30px]' />
+        </div>
         <div onClick={()=> setNav(!nav)} className='p-1 bg-darkGrey rounded-full cursor-pointer z-500'>
             <AiOutlineMenu size={28}/>
         </div>
