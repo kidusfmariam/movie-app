@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='w-screen h-auto flex flex-col sm:flex-row gap-3 justify-between py-5 px-3 items-center bg-green text-white'>
+    <div className='w-screen h-auto flex flex-col sm:flex-row gap-3 justify-between py-5 px-3 items-center bg-green text-white z-30 relative'>
         <h2 className='text-2xl font-normal uppercase'>Movie Land</h2>
 
         <div className='sm:w-[60%]'>

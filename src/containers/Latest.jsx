@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import requests from '../../requests'
 import CardSm from '../components/CardSm'
+import { Link } from 'react-router-dom'
 const Latest = ({title, fetchURL}) => {
 
     const[latest, setLatest] = useState([])
@@ -21,13 +22,16 @@ const Latest = ({title, fetchURL}) => {
     <div className='flex flex-wrap gap-3 items-center justify-center sm:justify-start w-full mx-auto'>
         {
             latest.map((item, id) => (
+                <Link to={`/${item.id}`}>
                 <CardSm
                 key={id + 1}
+                id={item.id}
                 title={item.title}
                 year={item.release_date.slice(0,4)}
                 adult={item.adult}
                 image={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
                 />
+                </Link>
             ))
         }
     </div>

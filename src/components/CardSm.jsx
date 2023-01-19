@@ -1,7 +1,8 @@
 import React from 'react'
-
-const CardSm = ({image, title, year, adult}) => {
+import { Link } from 'react-router-dom'
+const CardSm = ({image, title, year, adult, id}) => {
   return (
+
     <div className='w-[170px] h-[350px] my-2 relative rounded-xl hover:shadow-3xl pb-3 cursor-pointer'>
         <div className='w-full h-[80%]'>
         <img src={image} alt={title} className="w-full h-full object-cover rounded-md" />
@@ -12,6 +13,7 @@ const CardSm = ({image, title, year, adult}) => {
             <p className='text-sm opacity-70'>{year}</p>
         </div>
     </div>
+
   )
 }
 

@@ -7,7 +7,7 @@ const Navbar = () => {
     const [nav, setNav] = useState(false)
   return (
     <>
-    <div className='w-full fixed flex justify-between z-50 px-5 py-3 bg-black'>
+    <div className='w-full fixed flex justify-between z-50 px-5 py-3'>
         <h2 className='text-xl font-light  text-white cursor-pointer'>Movie Land</h2>
         <div onClick={()=> setNav(!nav)} className='p-1 bg-darkGrey rounded-full cursor-pointer z-500'>
             <AiOutlineMenu size={28}/>
@@ -30,7 +30,7 @@ const Navbar = () => {
           <BiMovie size={21}/>Movies</h2>
         </Link>
 
-        
+
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
           <AiOutlineSearch size={21}/>Search</h2>
     </div>

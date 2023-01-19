@@ -4,6 +4,7 @@ import axios from 'axios'
 import requests from '../../requests'
 import{MdChevronLeft, MdChevronRight} from 'react-icons/md'
 import CardLg from './CardLg'
+import { Link } from 'react-router-dom'
 const Featured = () => {
     const[movies, setMovies] = useState([])
     useEffect(() => {
@@ -36,7 +37,9 @@ const Featured = () => {
             title={item?.title}
             image={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
             date={item.release_date.slice(0,4)}
+            rating={item.vote_average}
             />
+            
     ))
     }
 </div>
