@@ -32,6 +32,7 @@ const Featured = () => {
     <div id='slider' className='flex overflow-x-scroll gap-4 relative w-screen h-[55vh] '>
     {
         movies.map((item, id) => (
+           
             <CardLg
             key={id + 1}
             title={item?.title}
@@ -39,6 +40,7 @@ const Featured = () => {
             date={item.release_date.slice(0,4)}
             rating={item.vote_average}
             />
+          
             
     ))
     }

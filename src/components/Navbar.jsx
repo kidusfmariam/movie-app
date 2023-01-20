@@ -32,9 +32,10 @@ const Navbar = () => {
           <BiMovie size={21}/>Movies</h2>
         </Link>
 
-
+        <Link to='/search' style={{textDecoration: 'none'}} onClick={() => setNav(!nav)}>
         <h2 className='text-2xl font-light opacity-70 cursor-pointer hover:opacity-100 flex items-center gap-3'>
           <AiOutlineSearch size={21}/>Search</h2>
+        </Link>
     </div>
     </>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import requests from '../../requests'
 import DisplayMovies from '../containers/DisplayMovies'
+import { Link } from 'react-router-dom'
 const Movies = () => {
    
   return (
@@ -23,6 +24,10 @@ const Movies = () => {
     <DisplayMovies
     fetchURL={requests.movies5}
     />
+
+    <div className='my-5 flex items-center justify-center'>
+    <p className='text-center'>Search for More movies <Link to='/search' style={{textDecoration: 'none'}}> <span className='text-green underline'>here.</span></Link></p>
+    </div>
     </div>
   )
 }
