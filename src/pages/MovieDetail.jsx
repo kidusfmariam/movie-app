@@ -12,7 +12,7 @@ const MovieDetail = () => {
   const [showModal, setShowModal] = useState(false)
   const[latest, setLatest] = useState([])
     useEffect(() => {
-     axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=1fe04e0ed06825cd39cd1eb75b9a25e1&append_to_response=videos`).then(response =>{
+     axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${import.meta.env.VITE_API_KEY}&append_to_response=videos`).then(response =>{
         setLatest(response.data);
 
         const trailerid = response.data.videos.results.find(

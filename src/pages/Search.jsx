@@ -14,7 +14,7 @@ const Search = () => {
     e.preventDefault();
     console.log("Searching");
     try{
-      const url=`https://api.themoviedb.org/3/search/movie/?api_key=1fe04e0ed06825cd39cd1eb75b9a25e1&query=${query}`;
+      const url=`https://api.themoviedb.org/3/search/movie/?api_key=${import.meta.env.VITE_API_KEY}&query=${query}`;
       const res= await fetch(url);
       const data= await res.json();
       console.log(data);

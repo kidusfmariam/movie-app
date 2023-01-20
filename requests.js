@@ -1,4 +1,4 @@
-const key='1fe04e0ed06825cd39cd1eb75b9a25e1'
+const key= import.meta.env.VITE_API_KEY
 const requests = {
     featured: `https://api.themoviedb.org/3/movie/popular?api_key=${key}`,
     topRated: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&page=1`,
