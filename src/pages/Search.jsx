@@ -9,7 +9,10 @@ const Search = () => {
 
   
  
-
+ useEffect(() => {
+   searchMovie();
+ }, [])
+ 
   const searchMovie = async(e)=>{
     e.preventDefault();
     console.log("Searching");
