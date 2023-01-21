@@ -10,7 +10,7 @@ const CardSm = ({image, title, year, adult, id}) => {
     viewport={{once: true}}
     layout
     transition={{duration: 1.2, delay: 0.2}}
-    className='sm:w-[170px] sm:h-[350px] w-[130px] h-[270px] my-2 relative rounded-xl hover:shadow-3xl pb-3 cursor-pointer'>
+    className='sm:w-[170px] sm:h-[350px] w-[134px] h-[355px] my-2 relative rounded-xl hover:shadow-3xl pb-3 cursor-pointer'>
         <div className='w-full h-[80%]'>
         <img src={image} alt={title} className="w-full h-full object-cover rounded-md" />
         </div>
