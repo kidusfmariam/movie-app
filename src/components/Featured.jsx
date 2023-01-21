@@ -32,14 +32,16 @@ const Featured = () => {
     <div id='slider' className='flex overflow-x-scroll gap-4 relative w-screen h-[55vh] '>
     {
         movies.map((item, id) => (
-           
+
             <CardLg
             key={id + 1}
             title={item?.title}
             image={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
             date={item.release_date.slice(0,4)}
             rating={item.vote_average}
+            route={item.id}
             />
+           
           
             
     ))

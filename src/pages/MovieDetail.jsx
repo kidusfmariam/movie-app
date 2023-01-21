@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import {AiFillStar, AiOutlineClose} from 'react-icons/ai'
 import {BsFillPlayFill} from 'react-icons/bs'
 import YouTube from 'react-youtube';
+import { motion } from 'framer-motion';
 import axios from 'axios';
 const MovieDetail = () => {
   const { movieId } = useParams();
@@ -16,10 +17,10 @@ const MovieDetail = () => {
         setLatest(response.data);
 
         const trailerid = response.data.videos.results.find(
-          (vid) => vid.name === "Official Trailer"
+          (vid) => vid.name === "Official Trailer" || "Full Movie"|| "Trailer" || vid.title
         );
 
-        setTrailer(trailerid ? trailerid : response.data.videos.results[0]);
+        setTrailer(trailerid ? trailerid : response.data.videos.results[1]);
      })
      }, [])
      console.log(latest)
@@ -33,9 +34,19 @@ const MovieDetail = () => {
       <div className='sm:h-screen h-auto w-screen relative z-20 flex items-center justify-center pt-20 pb-10'>
         <div className='flex md:flex-row flex-col gap-3 items-center justify-center px-2  mx-auto h-auto'>
           
-          <img src={`https://image.tmdb.org/t/p/original/${latest?.poster_path}`} alt={latest.title} className='w-[230px] h-[370px] rounded-md' />
+          <motion.img 
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 1.2, delay: 0.2}}
+            viewport={{once: true}}
+          src={`https://image.tmdb.org/t/p/original/${latest?.poster_path}`} alt={latest.title} className='w-[230px] h-[370px] rounded-md' />
       
-          <div className='sm:w-[40%] w-[100%]'>
+          <motion.div 
+          initial={{opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{duration: 1.2, delay: 0.4}}
+          viewport={{once: true}}
+          className='sm:w-[40%] w-[100%]'>
             <h1 className='text-4xl uppercase mb-3'>{latest.title}</h1>
             <div className='flex gap-1 text-3xl mb-3'>  
                 <AiFillStar/><h1>{latest.vote_average}<span className='text-xl'>/10</span></h1></div>
@@ -60,7 +71,7 @@ const MovieDetail = () => {
                   <p className='text-green underline hover:text-white'>Back to Homepage</p>
                 </Link>
               </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

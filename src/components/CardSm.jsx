@@ -7,6 +7,7 @@ const CardSm = ({image, title, year, adult, id}) => {
     <motion.div 
     initial={{opacity: 0}}
     whileInView={{opacity: 1}}
+    viewport={{once: true}}
     layout
     transition={{duration: 1.2, delay: 0.2}}
     className='w-[170px] h-[350px] my-2 relative rounded-xl hover:shadow-3xl pb-3 cursor-pointer'>
