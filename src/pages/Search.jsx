@@ -31,8 +31,8 @@ const Search = () => {
   return (
     <div className='min-h-screen max-h-auto pt-20 w-[90%] mx-auto flex flex-col justify-start items-center'>
       <div className='flex items-center justify-center gap-3 max-h-[40px] mb-3 py-10'>
-        <form onSubmit={searchMovie}>
-        <input aria-label="search"  placeholder='Search for Movies' name="query" value={query} onChange={changeHandler} type="text" className='min-w-[300px] border-b-white border-b bg-black outline-none mr-7 sm:mb-0 mb-5' />
+        <form onSubmit={searchMovie} className='px-4'>
+        <input aria-label="search"  placeholder='Search for Movies' name="query" value={query} onChange={changeHandler} type="text" className='w-[15rem] border-b-white border-b bg-black outline-none mr-7 sm:mb-0 mb-5' />
         <button className='hover:bg-green px-4 py-1 bg-transparent border border-green' type='submit'>Search</button>
         </form>
       </div>

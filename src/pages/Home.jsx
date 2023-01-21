@@ -12,10 +12,12 @@ const Home = () => {
     <Latest
     fetchURL={requests.topRated}
     title="TOP RATED"
+    route="/top-rated"
     />
     <Latest
     fetchURL={requests.recommended}
     title="RECOMMENDED"
+    route='/movies'
     />
    </>
   )
