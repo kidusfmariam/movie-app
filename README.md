@@ -1,5 +1,7 @@
 # Movie Land
 Movie Land is a movie-app that uses an API to retrieve movie data. The user will be able to search for movies by title and see a list of related titles with movie information like ratings, run time, overview, etc. The user will also be able to watch trailers of a movie from YouTube without leaving the app. 
+## Live Site
+[Movie Land](https://movie-app-two-bay.vercel.app/)
 ## Technology Used
 - React
 - Tailwind CSS
