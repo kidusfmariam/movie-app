@@ -17,7 +17,7 @@ const MovieDetail = () => {
         setLatest(response.data);
 
         const trailerid = response.data.videos.results.find(
-          (vid) => vid.type === "Official Trailer" || "Full Movie"|| "Trailer" || "Teaser" || vid.title
+          (vid) => vid.type === "Trailer" 
         );
 
         setTrailer(trailerid ? trailerid : response.data.videos.results[0]);
