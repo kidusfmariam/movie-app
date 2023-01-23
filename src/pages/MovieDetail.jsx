@@ -20,7 +20,7 @@ const MovieDetail = () => {
           (vid) => vid.name === "Official Trailer" || "Full Movie"|| "Trailer" || vid.title
         );
 
-        setTrailer(trailerid ? trailerid : response.data.videos.results[1]);
+        setTrailer(trailerid ? trailerid : response.data.videos.results[0]);
      })
      }, [])
      console.log(latest)
